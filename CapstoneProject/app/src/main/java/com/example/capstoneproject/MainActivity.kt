@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.capstoneproject.ui.presentation.login_signin_ui.loginScreen
 import com.example.capstoneproject.ui.theme.CapstoneProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CapstoneProjectTheme {
-                //commitone
+                loginScreen()
             }
         }
     }
