@@ -31,6 +31,7 @@ fun loginScreen(){
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         topImage()
+        Spacer(modifier = Modifier.padding(8.dp))
         googleButton()
         inputEmailPass()
     }
@@ -51,8 +52,6 @@ fun topImage(){
 
 @Composable
 fun googleButton() {
-
-
     OutlinedButton(onClick = { /*TODO*/ },
         //modifier= Modifier.size(50.dp),  //avoid the oval shape
         shape = RectangleShape ,
