@@ -30,7 +30,7 @@ fun loginScreen(){
             .background(Color.White),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        topImage()
+        topImageLogIn()
         Spacer(modifier = Modifier.padding(8.dp))
         googleButton()
         inputEmailPass()
@@ -38,7 +38,7 @@ fun loginScreen(){
 }
 
 @Composable
-fun topImage(){
+fun topImageLogIn(){
     Card(modifier = Modifier
         .fillMaxWidth()
         .fillMaxHeight(.5f)) {

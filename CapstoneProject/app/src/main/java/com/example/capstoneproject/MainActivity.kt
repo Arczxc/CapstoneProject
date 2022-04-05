@@ -3,14 +3,7 @@ package com.example.capstoneproject
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.capstoneproject.ui.presentation.login_signin_ui.loginScreen
+import com.example.capstoneproject.ui.presentation.product_screen_ui.ProductHomeScreen
 import com.example.capstoneproject.ui.theme.CapstoneProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +11,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CapstoneProjectTheme {
-                loginScreen()
+                //loadingScreen()
+                //loginScreen()
+                //signUpScreen()
+                ProductHomeScreen()
             }
         }
     }

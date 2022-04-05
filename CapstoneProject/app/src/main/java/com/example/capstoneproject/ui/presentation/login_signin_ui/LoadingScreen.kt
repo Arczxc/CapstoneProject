@@ -17,33 +17,5 @@ import com.example.capstoneproject.R
 
 @Composable
 fun loadingScreen(){
-    Box(
-        modifier = Modifier
-            .fillMaxSize(1f)
-    ){
-        Card(modifier = Modifier.fillMaxSize()) {
-            Image(
-                painter = painterResource(id = R.drawable.loadingscreen),
-                contentDescription = "LoadingScreen",
-                contentScale = ContentScale.FillBounds
-            )
-        }
-        Button(
-            onClick = { /*TODO*/ },
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 200.dp)
-        ) {
-            Text(text = "Sign Up Now")
-        }
 
-        Button(
-            onClick = { /*TODO*/ },
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 150.dp)
-        ) {
-            Text(text = "Log In")
-        }
-    }
 }
