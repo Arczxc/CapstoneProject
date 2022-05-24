@@ -8,3 +8,5 @@ val secondary = Color (0)
 
 val PlaceholderColor = Color(0xFFE5E5E5)
 val LightPrimaryColor = Color(0xFFFFF6EE)
+
+val textColor = Color(0xFFB1B1B1)

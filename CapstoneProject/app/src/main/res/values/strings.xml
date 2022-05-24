@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">CapstoneProject</string>
+
+    //IDs
+    <string name="web_client_id">1018155983959-ib768f24se04fu00t73s09hv5c29nvf8.apps.googleusercontent.com</string>
+
+    //Menu Items
+    <string name="revoke_access_item">Revoke Access</string>
+    <string name="sign_out_item">Sign-out</string>
+
+    //Fragments
+    <string name="profile_fragment">Profile</string>
 </resources>

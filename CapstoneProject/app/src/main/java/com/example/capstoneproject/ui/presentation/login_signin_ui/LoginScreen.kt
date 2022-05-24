@@ -4,7 +4,6 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.*
@@ -19,11 +18,12 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.capstoneproject.R
 
 
 @Composable
-fun loginScreen(){
+fun LoginScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -33,7 +33,7 @@ fun loginScreen(){
         topImageLogIn()
         Spacer(modifier = Modifier.padding(8.dp))
         googleButton()
-        inputEmailPass()
+        inputEmailPass(navController)
     }
 }
 
@@ -74,7 +74,7 @@ fun googleButton() {
 
 
 @Composable
-fun inputEmailPass(){
+fun inputEmailPass(navController: NavController){
 
     Card(
         modifier = Modifier
@@ -117,7 +117,7 @@ fun inputEmailPass(){
                 )
             }
             TextButton(
-                onClick = {},
+                onClick = {navController.navigate("Signup")},
                 contentPadding = PaddingValues(vertical = 0.dp)
             ) {
                 Text(
@@ -126,7 +126,6 @@ fun inputEmailPass(){
                     fontSize = 12.sp,
                 )
             }
-
         }
     }
 }

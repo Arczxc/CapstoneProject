@@ -16,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.capstoneproject.R
 import com.example.capstoneproject.ui.theme.InputBoxShape
 import com.example.capstoneproject.ui.theme.PlaceholderColor
@@ -24,7 +25,7 @@ import com.example.capstoneproject.ui.theme.secondary
 
 
 @Composable
-fun signUpScreen(){
+fun SignUpScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -34,7 +35,7 @@ fun signUpScreen(){
         topImageSignUp()
         inputInformation()
         buttonSignIn()
-        alreadyHaveAccountButton()
+        alreadyHaveAccountButton(navController)
     }
 }
 
@@ -132,8 +133,8 @@ fun buttonSignIn(){
 }
 
 @Composable
-fun alreadyHaveAccountButton(){
-    TextButton(onClick = { /*TODO*/ },
+fun alreadyHaveAccountButton(navController: NavController){
+    TextButton(onClick = { navController.navigate("Login") },
         modifier = Modifier
             .fillMaxWidth()
             .padding(top = 20.dp)
