@@ -1,4 +1,4 @@
-package com.example.capstoneproject.ui.theme
+package com.example.capstoneproject.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
