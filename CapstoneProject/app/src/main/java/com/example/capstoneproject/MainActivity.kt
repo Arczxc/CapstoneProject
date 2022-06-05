@@ -10,7 +10,7 @@ import androidx.navigation.NavHostController
 import com.example.capstoneproject.presentation.auth.AuthViewModel
 import com.example.capstoneproject.presentation.navigation.NavGraph
 import com.example.capstoneproject.presentation.navigation.Screen
-import com.example.capstoneproject.ui.theme.CapstoneProjectTheme
+import com.example.capstoneproject.ui.presentation.MainScreen.MainScreen
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -31,12 +31,12 @@ class MainActivity : ComponentActivity() {
         }
         setContent {
 
-                navController = rememberAnimatedNavController()
-                NavGraph(
-                    navController = navController
-                )
-                checkAuthStatus()
-                getAuthState()
+            navController = rememberAnimatedNavController()
+            NavGraph(
+                navController = navController
+            )
+            checkAuthStatus()
+            getAuthState()
 
         }
     }

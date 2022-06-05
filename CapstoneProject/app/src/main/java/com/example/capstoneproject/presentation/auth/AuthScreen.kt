@@ -19,6 +19,7 @@ import com.example.capstoneproject.presentation.auth.components.AuthContent
 import com.example.capstoneproject.presentation.auth.components.AuthTopBar
 import com.example.capstoneproject.presentation.components.ProgressBar
 import com.example.capstoneproject.presentation.navigation.Screen.ProfileScreen
+import com.example.capstoneproject.ui.presentation.MainScreen.MainScreen
 
 @Composable
 fun AuthScreen(
@@ -98,7 +99,8 @@ fun AuthScreen(
                         viewModel.createUser()
                     }
                 } else {
-                    navController.navigate(ProfileScreen.route)
+                    //navController.navigate(ProfileScreen.route)
+                    MainScreen()
                 }
             }
         }
@@ -114,7 +116,8 @@ fun AuthScreen(
         is Success -> {
             createUserResponse.data?.let { isUserCreated ->
                 if (isUserCreated) {
-                    navController.navigate(ProfileScreen.route)
+                    //navController.navigate(ProfileScreen.route)
+                    MainScreen()
                 }
             }
         }

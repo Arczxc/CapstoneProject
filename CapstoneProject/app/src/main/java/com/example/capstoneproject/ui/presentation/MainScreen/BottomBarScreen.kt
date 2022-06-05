@@ -8,34 +8,29 @@ sealed class BottomBarScreen(
     val route: String,
     val title: String,
     val icon: ImageVector,
-    val show: Boolean
 ) {
     object Home : BottomBarScreen(
         route = "home",
         title = "Home",
         icon = Icons.Default.Home,
-        show = true
     )
 
     object Ticket : BottomBarScreen(
         route = "ticket",
         title = "Ticket",
         icon = Icons.Default.SupportAgent,
-        show = true
     )
 
     object Cart : BottomBarScreen(
         route = "cart",
         title = "Cart",
         icon = Icons.Default.ShoppingCart,
-        show = true
     )
 
     object Profile : BottomBarScreen(
         route = "profile",
         title = "Profile",
         icon = Icons.Default.Person,
-        show = true
     )
 
 }
