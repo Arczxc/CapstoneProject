@@ -5,7 +5,10 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -13,6 +16,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -54,14 +58,35 @@ fun MainScreen(){
 
     Scaffold(
         bottomBar = {
-            BottomBar(
-                navController = navController,
-                bottomBarState = bottomBarState
-            )
+            BottomAppBar(
+                backgroundColor = Color(0xFFEEEEEE),
+                cutoutShape = CircleShape,
+                elevation = 10.dp
+            ){
+                BottomBar(
+                    navController = navController,
+                    bottomBarState = bottomBarState
+                )
+            }
         },
         content = {
             BottomNavGraph(navController = navController)
-        }
+        },
+        floatingActionButton = {
+                FloatingActionButton(
+                    backgroundColor = MaterialTheme.colors.primary,
+                    onClick = {
+
+                    }
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = null
+                    )
+                }
+        },
+        isFloatingActionButtonDocked = true,
+        floatingActionButtonPosition = FabPosition.Center,
     )
 }
 
@@ -95,6 +120,8 @@ fun BottomBar(navController: NavController, bottomBarState: MutableState<Boolean
                             )
                         },
                         selected = currentRoute == screen.route,
+                        selectedContentColor = Color.Green,
+                        unselectedContentColor = Color.White,
                         onClick = {
                             navController.navigate(screen.route) {
                                 popUpTo(navController.graph.findStartDestination().id) {

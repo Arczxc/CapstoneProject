@@ -17,61 +17,88 @@ val products = listOf<Product>(
         1,
         1,
         R.drawable.c2,
-        "Nike Air Running",
+        "Product 2",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱200.00",
         "4.5"
     ),
     Product(
         2,
         1,
         R.drawable.c3,
-        "Nike Air Running",
+        "Product 3",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱300.00",
         "4.5"
     ),
     Product(
         3,
         1,
         R.drawable.c4,
-        "Nike Air Running",
+        "Product 4",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱150.00",
         "4.5"
     ),
     Product(
         4,
         1,
         R.drawable.c5,
-        "Nike Air Running",
+        "Product 5",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱100.50",
         "4.5"
     ),
     Product(
         5,
         1,
         R.drawable.c6,
-        "Nike Air Running",
+        "Product6",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱500.00",
         "4.5"
     ),
     Product(
         6,
         1,
         R.drawable.c7,
-        "Nike Air Running",
+        "Product 7",
         "Best of all in just on place. Find your perfect product only here",
-        "₱100.00",
+        "₱1100.00",
         "4.5"
     ),
     Product(
         7,
         1,
         R.drawable.c8,
-        "Nike Air Running",
+        "Product 8",
+        "Best of all in just on place. Find your perfect product only here",
+        "₱10000.00",
+        "4.5"
+    ),
+    Product(
+        8,
+        2,
+        R.drawable.b1,
+        "Box 1",
+        "Best of all in just on place. Find your perfect product only here",
+        "₱100.00",
+        "4.5"
+    ),
+    Product(
+        9,
+        2,
+        R.drawable.b2,
+        "Box 2",
+        "Best of all in just on place. Find your perfect product only here",
+        "₱100.00",
+        "4.5"
+    ),
+    Product(
+        10,
+        2,
+        R.drawable.b3,
+        "Box 3",
         "Best of all in just on place. Find your perfect product only here",
         "₱100.00",
         "4.5"
@@ -79,8 +106,8 @@ val products = listOf<Product>(
     Product(
         11,
         2,
-        R.drawable.b1,
-        "Nike Air Running",
+        R.drawable.b4,
+        "Box 4",
         "Best of all in just on place. Find your perfect product only here",
         "₱100.00",
         "4.5"
@@ -88,8 +115,8 @@ val products = listOf<Product>(
     Product(
         12,
         2,
-        R.drawable.b2,
-        "Nike Air Running",
+        R.drawable.b5,
+        "Box 5",
         "Best of all in just on place. Find your perfect product only here",
         "₱100.00",
         "4.5"
@@ -97,20 +124,30 @@ val products = listOf<Product>(
     Product(
         13,
         2,
-        R.drawable.b3,
-        "Nike Air Running",
+        R.drawable.b6,
+        "Box 6",
         "Best of all in just on place. Find your perfect product only here",
         "₱100.00",
         "4.5"
     ),
     Product(
-        12,
+        14,
         2,
-        R.drawable.b4,
-        "Nike Air Running",
+        R.drawable.b7,
+        "Box 7",
         "Best of all in just on place. Find your perfect product only here",
         "₱100.00",
         "4.5"
     ),
+    Product(
+        15,
+        2,
+        R.drawable.b8,
+        "Box 8",
+        "Best of all in just on place. Find your perfect product only here",
+        "₱100.00",
+        "4.5"
+    ),
+
 )
 

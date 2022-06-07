@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.runtime.Composable
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import com.example.capstoneproject.presentation.auth.AuthViewModel
@@ -40,10 +41,10 @@ class MainActivity : ComponentActivity() {
 
         }
     }
-
+@Composable
     private fun checkAuthStatus() {
         if(authViewModel.isUserAuthenticated) {
-            navController.navigate(Screen.ProfileScreen.route)
+            MainScreen()
         }
     }
 
