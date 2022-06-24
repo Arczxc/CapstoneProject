@@ -16,9 +16,7 @@ import com.example.capstoneproject.core.Constants.SIGN_IN_ERROR_MESSAGE
 import com.example.capstoneproject.core.Utils.Companion.print
 import com.example.capstoneproject.domain.model.Response.*
 import com.example.capstoneproject.presentation.auth.components.AuthContent
-import com.example.capstoneproject.presentation.auth.components.AuthTopBar
 import com.example.capstoneproject.presentation.components.ProgressBar
-import com.example.capstoneproject.presentation.navigation.Screen.ProfileScreen
 import com.example.capstoneproject.ui.presentation.MainScreen.MainScreen
 
 @Composable
@@ -27,9 +25,6 @@ fun AuthScreen(
     viewModel: AuthViewModel = hiltViewModel()
 ) {
     Scaffold(
-        topBar = {
-            AuthTopBar()
-        },
         content = { padding ->
             AuthContent(padding)
         }

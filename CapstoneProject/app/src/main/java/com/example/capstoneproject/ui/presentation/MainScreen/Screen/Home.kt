@@ -123,7 +123,7 @@ fun CategoryTab(){
 
     )
     Column {
-        ScrollableTabRow(selectedTabIndex = state, contentColor = Color.Black,  edgePadding = 8.dp) {
+        ScrollableTabRow(selectedTabIndex = state, contentColor = Color.Black,  edgePadding = 8.dp, backgroundColor = Color.White) {
             titles.forEachIndexed { index, title ->
                 Tab(
                     text = { Text(title) },

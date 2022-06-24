@@ -59,7 +59,7 @@ fun ProductScreen(
             Spacer(modifier = Modifier.height(24.dp))
             SizeSection()
             Spacer(modifier = Modifier.height(24.dp))
-            DescriptionSection("Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.")
+            DescriptionSection("A product description is the marketing copy that explains what a product is and why it’s worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so the")
         }
         AddToCartSection(modifier = Modifier.align(Alignment.End), Color.Gray)
     }

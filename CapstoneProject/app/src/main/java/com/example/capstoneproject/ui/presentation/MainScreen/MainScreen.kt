@@ -56,42 +56,57 @@ fun MainScreen(){
         else -> bottomBarState.value = false
     }
 
-    Scaffold(
-        bottomBar = {
-            BottomAppBar(
-                backgroundColor = Color(0xFFEEEEEE),
-                cutoutShape = CircleShape,
-                elevation = 10.dp
-            ){
-                BottomBar(
-                    navController = navController,
-                    bottomBarState = bottomBarState
-                )
-            }
-        },
-        content = {
-            BottomNavGraph(navController = navController)
-        },
-        floatingActionButton = {
-                FloatingActionButton(
-                    backgroundColor = MaterialTheme.colors.primary,
-                    onClick = {
+            Scaffold(
+                bottomBar = {
+                    AnimatedVisibility(
+                        visible = bottomBarState.value,
+                        enter = slideInVertically(initialOffsetY = { it }),
+                        exit = slideOutVertically(targetOffsetY = { it }),
+                        content = {
+                            BottomAppBar(
+                                backgroundColor = Color(0xFFEEEEEE),
+                                cutoutShape = CircleShape,
+                                elevation = 10.dp
+                            ){
+                                BottomBar(
+                                    navController = navController
 
-                    }
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Add,
-                        contentDescription = null
-                    )
-                }
-        },
-        isFloatingActionButtonDocked = true,
-        floatingActionButtonPosition = FabPosition.Center,
-    )
+                                )
+                            }
+                        })
+                },
+                content = {
+                    BottomNavGraph(navController = navController)
+                },
+                floatingActionButton = {
+                    AnimatedVisibility(
+                        visible = bottomBarState.value,
+                        enter = slideInVertically(initialOffsetY = { it }),
+                        exit = slideOutVertically(targetOffsetY = { it }),
+                        content = {
+                            FloatingActionButton(
+                                backgroundColor = MaterialTheme.colors.primary,
+                                onClick = {
+
+                                }
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Add,
+                                    contentDescription = null
+                                )
+                            }
+                        })
+                },
+                isFloatingActionButtonDocked = true,
+                floatingActionButtonPosition = FabPosition.Center,
+            )
+
+
+
 }
 
 @Composable
-fun BottomBar(navController: NavController, bottomBarState: MutableState<Boolean>){
+fun BottomBar(navController: NavController){
     val screens = listOf(
         BottomBarScreen.Home,
         BottomBarScreen.Ticket,
@@ -99,11 +114,6 @@ fun BottomBar(navController: NavController, bottomBarState: MutableState<Boolean
         BottomBarScreen.Profile,
     )
 
-    AnimatedVisibility(
-        visible = bottomBarState.value,
-        enter = slideInVertically(initialOffsetY = { it }),
-        exit = slideOutVertically(targetOffsetY = { it }),
-        content = {
             BottomNavigation{
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
@@ -135,8 +145,6 @@ fun BottomBar(navController: NavController, bottomBarState: MutableState<Boolean
                     )
                 }
             }
-        }
-    )
 }
 
 

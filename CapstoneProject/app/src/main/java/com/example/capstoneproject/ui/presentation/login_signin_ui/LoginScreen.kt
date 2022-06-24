@@ -23,18 +23,17 @@ import com.example.capstoneproject.R
 
 
 @Composable
-fun LoginScreen(navController: NavController){
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        topImageLogIn()
-        Spacer(modifier = Modifier.padding(8.dp))
-        googleButton()
-        inputEmailPass(navController)
-    }
+fun LoginScreen(navController: NavController){Column(
+    modifier = Modifier
+        .fillMaxSize()
+        .background(Color.White),
+    horizontalAlignment = Alignment.CenterHorizontally
+) {
+    topImageLogIn()
+    Spacer(modifier = Modifier.padding(8.dp))
+    googleButton()
+    inputEmailPass(navController)
+}
 }
 
 @Composable
@@ -218,5 +217,6 @@ fun passInput(){
         }
     )
 }
+
 
 
